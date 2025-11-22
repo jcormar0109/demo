@@ -6,7 +6,6 @@ use App\Filament\Resources\Shop\Orders\OrderResource;
 use App\Models\Shop\Order;
 use Filament\Actions\Action;
 use Filament\CustomDashboardsPlugin\Widgets\Concerns\InteractsWithCustomDashboards;
-use Filament\CustomDashboardsPlugin\Widgets\Contracts\CustomDashboardWidget;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Widgets\TableWidget as BaseWidget;

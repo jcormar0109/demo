@@ -3,7 +3,6 @@
 namespace App\Filament\Widgets;
 
 use Filament\CustomDashboardsPlugin\Widgets\Concerns\InteractsWithCustomDashboards;
-use Filament\CustomDashboardsPlugin\Widgets\Contracts\CustomDashboardWidget;
 use Filament\Widgets\ChartWidget;
 
 class OrderDistributionByStatusChart extends ChartWidget

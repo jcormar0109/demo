@@ -4,7 +4,6 @@ namespace App\Filament\Widgets;
 
 use Carbon\Carbon;
 use Filament\CustomDashboardsPlugin\Widgets\Concerns\InteractsWithCustomDashboards;
-use Filament\CustomDashboardsPlugin\Widgets\Contracts\CustomDashboardWidget;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
