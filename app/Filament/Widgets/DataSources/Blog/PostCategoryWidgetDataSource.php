@@ -1,21 +1,22 @@
 <?php
 
-namespace App\Filament\Widgets\DataSources\Shop;
+namespace App\Filament\Widgets\DataSources\Blog;
 
-use App\Models\Shop\Customer;
+use App\Models\Blog\PostCategory;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\Attribute;
+use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\BooleanAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\DateAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\TextAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\EloquentWidgetDataSource;
 use UnitEnum;
 
-class CustomerWidgetDataSource extends EloquentWidgetDataSource
+class PostCategoryWidgetDataSource extends EloquentWidgetDataSource
 {
-    protected ?string $model = Customer::class;
+    protected ?string $model = PostCategory::class;
 
-    protected string|UnitEnum|null $group = 'Shop';
+    protected string|UnitEnum|null $group = 'Blog';
 
-    protected ?int $sort = 2;
+    protected ?int $sort = 1;
 
     /**
      * @return array<Attribute>
@@ -24,19 +25,17 @@ class CustomerWidgetDataSource extends EloquentWidgetDataSource
     {
         return [
             TextAttribute::make('name'),
-            TextAttribute::make('email'),
-            TextAttribute::make('photo')
+            TextAttribute::make('slug'),
+            TextAttribute::make('description')
                 ->nullable(),
-            TextAttribute::make('phone')
+            BooleanAttribute::make('is_visible'),
+            TextAttribute::make('seo_title')
                 ->nullable(),
-            DateAttribute::make('birthday')
-                ->time(false)
+            TextAttribute::make('seo_description')
                 ->nullable(),
             DateAttribute::make('created_at')
                 ->nullable(),
             DateAttribute::make('updated_at')
-                ->nullable(),
-            DateAttribute::make('deleted_at')
                 ->nullable(),
         ];
     }

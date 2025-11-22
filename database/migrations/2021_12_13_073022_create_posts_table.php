@@ -13,17 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('shop_brands', function (Blueprint $table): void {
+        Schema::create('posts', function (Blueprint $table): void {
             $table->id();
-            $table->string('name');
+            $table->foreignId('author_id')->nullable()->cascadeOnDelete();
+            $table->foreignId('post_category_id')->nullable()->nullOnDelete();
+            $table->string('title');
             $table->string('slug')->unique();
-            $table->string('website')->nullable();
-            $table->longText('description')->nullable();
-            $table->unsignedSmallInteger('position')->default(0);
-            $table->boolean('is_visible')->default(false);
+            $table->longText('content');
+            $table->date('published_at')->nullable();
             $table->string('seo_title', 60)->nullable();
             $table->string('seo_description', 160)->nullable();
-            $table->integer('sort')->nullable();
             $table->timestamps();
         });
     }
@@ -35,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shop_brands');
+        Schema::dropIfExists('posts');
     }
 };

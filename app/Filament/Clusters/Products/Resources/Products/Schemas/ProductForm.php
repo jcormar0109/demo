@@ -141,13 +141,13 @@ class ProductForm
 
                         Section::make('Associations')
                             ->schema([
-                                Select::make('shop_brand_id')
+                                Select::make('brand_id')
                                     ->relationship('brand', 'name')
                                     ->searchable()
                                     ->hiddenOn(ProductsRelationManager::class),
 
-                                Select::make('categories')
-                                    ->relationship('categories', 'name')
+                                Select::make('productCategories')
+                                    ->relationship('productCategories', 'name')
                                     ->multiple()
                                     ->required(),
                             ]),

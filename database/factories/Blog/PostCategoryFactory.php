@@ -1,20 +1,20 @@
 <?php
 
-namespace Database\Factories\Shop;
+namespace Database\Factories\Blog;
 
-use App\Models\Shop\Category;
+use App\Models\Blog\PostCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends Factory<Category>
+ * @extends Factory<PostCategory>
  */
-class CategoryFactory extends Factory
+class PostCategoryFactory extends Factory
 {
     /**
      * @var string
      */
-    protected $model = Category::class;
+    protected $model = PostCategory::class;
 
     public function definition(): array
     {

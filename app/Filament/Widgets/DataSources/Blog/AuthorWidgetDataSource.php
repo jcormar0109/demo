@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Filament\Widgets\DataSources\Shop;
+namespace App\Filament\Widgets\DataSources\Blog;
 
-use App\Models\Shop\Customer;
+use App\Models\Blog\Author;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\Attribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\DateAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\TextAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\EloquentWidgetDataSource;
 use UnitEnum;
 
-class CustomerWidgetDataSource extends EloquentWidgetDataSource
+class AuthorWidgetDataSource extends EloquentWidgetDataSource
 {
-    protected ?string $model = Customer::class;
+    protected ?string $model = Author::class;
 
-    protected string|UnitEnum|null $group = 'Shop';
+    protected string|UnitEnum|null $group = 'Blog';
 
     protected ?int $sort = 2;
 
@@ -27,16 +27,15 @@ class CustomerWidgetDataSource extends EloquentWidgetDataSource
             TextAttribute::make('email'),
             TextAttribute::make('photo')
                 ->nullable(),
-            TextAttribute::make('phone')
+            TextAttribute::make('bio')
                 ->nullable(),
-            DateAttribute::make('birthday')
-                ->time(false)
+            TextAttribute::make('github_handle')
+                ->nullable(),
+            TextAttribute::make('twitter_handle')
                 ->nullable(),
             DateAttribute::make('created_at')
                 ->nullable(),
             DateAttribute::make('updated_at')
-                ->nullable(),
-            DateAttribute::make('deleted_at')
                 ->nullable(),
         ];
     }

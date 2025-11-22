@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('shop_order_addresses', function (Blueprint $table): void {
+        Schema::create('customers', function (Blueprint $table): void {
             $table->id();
-            $table->morphs('addressable');
-            $table->string('country')->nullable();
-            $table->string('street')->nullable();
-            $table->string('city')->nullable();
-            $table->string('state')->nullable();
-            $table->string('zip')->nullable();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('photo')->nullable();
+            $table->string('phone')->nullable();
+            $table->date('birthday')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shop_order_addresses');
+        Schema::dropIfExists('customers');
     }
 };

@@ -2,7 +2,7 @@
 
 namespace App\Models\Shop;
 
-use Database\Factories\Shop\CategoryFactory;
+use Database\Factories\Shop\ProductCategoryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -11,9 +11,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Category extends Model implements HasMedia
+class ProductCategory extends Model implements HasMedia
 {
-    /** @use HasFactory<CategoryFactory> */
+    /** @use HasFactory<ProductCategoryFactory> */
     use HasFactory;
 
     use InteractsWithMedia;
@@ -21,7 +21,7 @@ class Category extends Model implements HasMedia
     /**
      * @var string
      */
-    protected $table = 'shop_categories';
+    protected $table = 'product_categories';
 
     /**
      * @var array<string, string>
@@ -30,21 +30,21 @@ class Category extends Model implements HasMedia
         'is_visible' => 'boolean',
     ];
 
-    /** @return HasMany<Category, $this> */
+    /** @return HasMany<ProductCategory, $this> */
     public function children(): HasMany
     {
-        return $this->hasMany(Category::class, 'parent_id');
+        return $this->hasMany(ProductCategory::class, 'parent_id');
     }
 
-    /** @return BelongsTo<Category, $this> */
+    /** @return BelongsTo<ProductCategory, $this> */
     public function parent(): BelongsTo
     {
-        return $this->belongsTo(Category::class, 'parent_id');
+        return $this->belongsTo(ProductCategory::class, 'parent_id');
     }
 
     /** @return BelongsToMany<Product, $this> */
     public function products(): BelongsToMany
     {
-        return $this->belongsToMany(Product::class, 'shop_category_product', 'shop_category_id', 'shop_product_id');
+        return $this->belongsToMany(Product::class, 'product_category_product', 'product_category_id', 'product_id');
     }
 }

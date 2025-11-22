@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('blog_posts', function (Blueprint $table): void {
+        Schema::create('product_categories', function (Blueprint $table): void {
             $table->id();
-            $table->foreignId('blog_author_id')->nullable()->cascadeOnDelete();
-            $table->foreignId('blog_category_id')->nullable()->nullOnDelete();
-            $table->string('title');
+            $table->foreignId('parent_id')->nullable()->constrained('product_categories')->cascadeOnDelete();
+            $table->string('name');
             $table->string('slug')->unique();
-            $table->longText('content');
-            $table->date('published_at')->nullable();
+            $table->longText('description')->nullable();
+            $table->unsignedSmallInteger('position')->default(0);
+            $table->boolean('is_visible')->default(false);
             $table->string('seo_title', 60)->nullable();
             $table->string('seo_description', 160)->nullable();
             $table->timestamps();
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blog_posts');
+        Schema::dropIfExists('product_categories');
     }
 };

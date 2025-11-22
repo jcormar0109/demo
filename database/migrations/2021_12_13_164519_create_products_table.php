@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('shop_products', function (Blueprint $table): void {
+        Schema::create('products', function (Blueprint $table): void {
             $table->id();
-            $table->foreignId('shop_brand_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('brand_id')->nullable()->constrained()->nullOnDelete();
             $table->string('name');
             $table->string('slug')->unique()->nullable();
             $table->string('sku')->unique()->nullable();
@@ -65,6 +65,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shop_products');
+        Schema::dropIfExists('products');
     }
 };

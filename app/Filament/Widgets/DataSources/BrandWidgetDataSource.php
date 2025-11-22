@@ -1,19 +1,18 @@
 <?php
 
-namespace App\Filament\Widgets\DataSources\Shop;
+namespace App\Filament\Widgets\DataSources;
 
-use App\Models\Shop\Customer;
+use App\Models\Shop\Brand;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\Attribute;
+use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\BooleanAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\DateAttribute;
+use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\NumberAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\TextAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\EloquentWidgetDataSource;
-use UnitEnum;
 
-class CustomerWidgetDataSource extends EloquentWidgetDataSource
+class BrandWidgetDataSource extends EloquentWidgetDataSource
 {
-    protected ?string $model = Customer::class;
-
-    protected string|UnitEnum|null $group = 'Shop';
+    protected ?string $model = Brand::class;
 
     protected ?int $sort = 2;
 
@@ -24,19 +23,22 @@ class CustomerWidgetDataSource extends EloquentWidgetDataSource
     {
         return [
             TextAttribute::make('name'),
-            TextAttribute::make('email'),
-            TextAttribute::make('photo')
+            TextAttribute::make('slug'),
+            TextAttribute::make('website')
                 ->nullable(),
-            TextAttribute::make('phone')
+            TextAttribute::make('description')
                 ->nullable(),
-            DateAttribute::make('birthday')
-                ->time(false)
+            NumberAttribute::make('position'),
+            BooleanAttribute::make('is_visible'),
+            TextAttribute::make('seo_title')
+                ->nullable(),
+            TextAttribute::make('seo_description')
+                ->nullable(),
+            NumberAttribute::make('sort')
                 ->nullable(),
             DateAttribute::make('created_at')
                 ->nullable(),
             DateAttribute::make('updated_at')
-                ->nullable(),
-            DateAttribute::make('deleted_at')
                 ->nullable(),
         ];
     }

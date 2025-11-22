@@ -1,21 +1,18 @@
 <?php
 
-namespace App\Filament\Widgets\DataSources\Shop;
+namespace App\Filament\Widgets\DataSources;
 
-use App\Models\Shop\Customer;
+use Filament\CustomDashboardsPlugin\Enums\DashboardRole;
+use Filament\CustomDashboardsPlugin\Models\Dashboard;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\Attribute;
+use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\BooleanAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\DateAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\Attributes\TextAttribute;
 use Filament\CustomDashboardsPlugin\Widgets\DataSources\EloquentWidgetDataSource;
-use UnitEnum;
 
-class CustomerWidgetDataSource extends EloquentWidgetDataSource
+class DashboardWidgetDataSource extends EloquentWidgetDataSource
 {
-    protected ?string $model = Customer::class;
-
-    protected string|UnitEnum|null $group = 'Shop';
-
-    protected ?int $sort = 2;
+    protected ?string $model = Dashboard::class;
 
     /**
      * @return array<Attribute>
@@ -24,13 +21,16 @@ class CustomerWidgetDataSource extends EloquentWidgetDataSource
     {
         return [
             TextAttribute::make('name'),
-            TextAttribute::make('email'),
-            TextAttribute::make('photo')
+            TextAttribute::make('slug'),
+            TextAttribute::make('default_role')
+                ->enum(DashboardRole::class)
                 ->nullable(),
-            TextAttribute::make('phone')
+            BooleanAttribute::make('has_navigation_item'),
+            TextAttribute::make('navigation_icon')
                 ->nullable(),
-            DateAttribute::make('birthday')
-                ->time(false)
+            TextAttribute::make('navigation_label')
+                ->nullable(),
+            TextAttribute::make('navigation_group')
                 ->nullable(),
             DateAttribute::make('created_at')
                 ->nullable(),

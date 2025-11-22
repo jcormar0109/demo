@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('shop_orders', function (Blueprint $table): void {
+        Schema::create('orders', function (Blueprint $table): void {
             $table->id();
-            $table->foreignId('shop_customer_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('customer_id')->nullable()->constrained()->nullOnDelete();
             $table->string('number', 32)->unique();
             $table->decimal('total_price', 12, 2)->nullable();
             $table->enum('status', ['new', 'processing', 'shipped', 'delivered', 'cancelled'])->default('new');
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shop_orders');
+        Schema::dropIfExists('orders');
     }
 };

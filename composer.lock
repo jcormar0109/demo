@@ -1183,7 +1183,7 @@
         },
         {
             "name": "filament/actions",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/actions",
@@ -1227,11 +1227,11 @@
         },
         {
             "name": "filament/custom-dashboards-plugin",
-            "version": "dev-line-chart-data",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "../custom-dashboards-plugin",
-                "reference": "d6a41b4d888cb3517154251ed75149810591aea8"
+                "reference": "e3b99fcf88c8e3f344ac9b680c1ab37dc673476b"
             },
             "require": {
                 "filament/filament": "^4.0|^5.0",
@@ -1298,7 +1298,7 @@
         },
         {
             "name": "filament/filament",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/panels",
@@ -1350,7 +1350,7 @@
         },
         {
             "name": "filament/forms",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/forms",
@@ -1395,7 +1395,7 @@
         },
         {
             "name": "filament/infolists",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/infolists",
@@ -1435,7 +1435,7 @@
         },
         {
             "name": "filament/notifications",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/notifications",
@@ -1477,7 +1477,7 @@
         },
         {
             "name": "filament/query-builder",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/query-builder",
@@ -1518,7 +1518,7 @@
         },
         {
             "name": "filament/schemas",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/schemas",
@@ -1558,7 +1558,7 @@
         },
         {
             "name": "filament/spatie-laravel-media-library-plugin",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/spatie-laravel-media-library-plugin",
@@ -1590,7 +1590,7 @@
         },
         {
             "name": "filament/spatie-laravel-settings-plugin",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/spatie-laravel-settings-plugin",
@@ -1629,7 +1629,7 @@
         },
         {
             "name": "filament/spatie-laravel-tags-plugin",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/spatie-laravel-tags-plugin",
@@ -1661,11 +1661,11 @@
         },
         {
             "name": "filament/support",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/support",
-                "reference": "9cefe2ef695ecf91de58bd5214d67fe76ba79e77"
+                "reference": "3024a6e3ddcabbd24f3335cc68cdce6d05e33a05"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.5",
@@ -1674,7 +1674,7 @@
                 "illuminate/contracts": "^11.28|^12.0",
                 "kirschbaum-development/eloquent-power-joins": "^4.0",
                 "league/uri-components": "^7.0",
-                "livewire/livewire": "^4.0@beta",
+                "livewire/livewire": "^3.5",
                 "nette/php-generator": "^4.0",
                 "php": "^8.2",
                 "ryangjchandler/blade-capture-directive": "^1.0",
@@ -1714,7 +1714,7 @@
         },
         {
             "name": "filament/tables",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/tables",
@@ -1755,7 +1755,7 @@
         },
         {
             "name": "filament/widgets",
-            "version": "5.x-dev",
+            "version": "4.x-dev",
             "dist": {
                 "type": "path",
                 "url": "../filament/packages/widgets",
@@ -2475,16 +2475,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.36.1",
+            "version": "v12.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "cad110d7685fbab990a6bb8184d0cfd847d7c4d8"
+                "reference": "3c3c4ad30f5b528b164a7c09aa4ad03118c4c125"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/cad110d7685fbab990a6bb8184d0cfd847d7c4d8",
-                "reference": "cad110d7685fbab990a6bb8184d0cfd847d7c4d8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3c3c4ad30f5b528b164a7c09aa4ad03118c4c125",
+                "reference": "3c3c4ad30f5b528b164a7c09aa4ad03118c4c125",
                 "shasum": ""
             },
             "require": {
@@ -2690,20 +2690,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-10-29T14:20:57+00:00"
+            "time": "2025-11-04T15:39:33+00:00"
         },
         {
             "name": "laravel/nightwatch",
-            "version": "v1.17.1",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/nightwatch.git",
-                "reference": "1b5eac920e39073bae6e2ace33805c479b0dc96f"
+                "reference": "ca2231b1eab3645c7200d2db428aa02086993401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/nightwatch/zipball/1b5eac920e39073bae6e2ace33805c479b0dc96f",
-                "reference": "1b5eac920e39073bae6e2ace33805c479b0dc96f",
+                "url": "https://api.github.com/repos/laravel/nightwatch/zipball/ca2231b1eab3645c7200d2db428aa02086993401",
+                "reference": "ca2231b1eab3645c7200d2db428aa02086993401",
                 "shasum": ""
             },
             "require": {
@@ -2781,7 +2781,7 @@
                 "issues": "https://github.com/laravel/nightwatch/issues",
                 "source": "https://github.com/laravel/nightwatch"
             },
-            "time": "2025-10-27T23:07:05+00:00"
+            "time": "2025-11-04T05:08:13+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -3759,16 +3759,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v4.0.0-beta.2",
+            "version": "v3.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "1a6b9c954c8dfff30428b7f54199bae854d9fe34"
+                "reference": "ef04be759da41b14d2d129e670533180a44987dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/1a6b9c954c8dfff30428b7f54199bae854d9fe34",
-                "reference": "1a6b9c954c8dfff30428b7f54199bae854d9fe34",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/ef04be759da41b14d2d129e670533180a44987dc",
+                "reference": "ef04be759da41b14d2d129e670533180a44987dc",
                 "shasum": ""
             },
             "require": {
@@ -3823,7 +3823,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v4.0.0-beta.2"
+                "source": "https://github.com/livewire/livewire/tree/v3.6.4"
             },
             "funding": [
                 {
@@ -3831,7 +3831,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-31T12:33:14+00:00"
+            "time": "2025-07-17T05:12:15+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
@@ -6242,16 +6242,16 @@
         },
         {
             "name": "spatie/laravel-medialibrary",
-            "version": "11.17.0",
+            "version": "11.17.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-medialibrary.git",
-                "reference": "0d58f3184d6449e3173ee3e44b29dc5ff7425d71"
+                "reference": "0a19683edb482622a672913ed96de4095f7cd5d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/0d58f3184d6449e3173ee3e44b29dc5ff7425d71",
-                "reference": "0d58f3184d6449e3173ee3e44b29dc5ff7425d71",
+                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/0a19683edb482622a672913ed96de4095f7cd5d1",
+                "reference": "0a19683edb482622a672913ed96de4095f7cd5d1",
                 "shasum": ""
             },
             "require": {
@@ -6270,7 +6270,7 @@
                 "spatie/image": "^3.3.2",
                 "spatie/laravel-package-tools": "^1.16.1",
                 "spatie/temporary-directory": "^2.2",
-                "symfony/console": "^6.4.1|^7.0"
+                "symfony/console": "^6.4.1|^7.0|^8.0"
             },
             "conflict": {
                 "php-ffmpeg/php-ffmpeg": "<0.6.1"
@@ -6336,7 +6336,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-medialibrary/issues",
-                "source": "https://github.com/spatie/laravel-medialibrary/tree/11.17.0"
+                "source": "https://github.com/spatie/laravel-medialibrary/tree/11.17.3"
             },
             "funding": [
                 {
@@ -6348,7 +6348,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-22T08:01:45+00:00"
+            "time": "2025-11-04T10:15:46+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -10295,16 +10295,16 @@
         },
         {
             "name": "larastan/larastan",
-            "version": "v3.7.2",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/larastan/larastan.git",
-                "reference": "a761859a7487bd7d0cb8b662a7538a234d5bb5ae"
+                "reference": "d13ef96d652d1b2a8f34f1760ba6bf5b9c98112e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/larastan/larastan/zipball/a761859a7487bd7d0cb8b662a7538a234d5bb5ae",
-                "reference": "a761859a7487bd7d0cb8b662a7538a234d5bb5ae",
+                "url": "https://api.github.com/repos/larastan/larastan/zipball/d13ef96d652d1b2a8f34f1760ba6bf5b9c98112e",
+                "reference": "d13ef96d652d1b2a8f34f1760ba6bf5b9c98112e",
                 "shasum": ""
             },
             "require": {
@@ -10318,7 +10318,7 @@
                 "illuminate/pipeline": "^11.44.2 || ^12.4.1",
                 "illuminate/support": "^11.44.2 || ^12.4.1",
                 "php": "^8.2",
-                "phpstan/phpstan": "^2.1.28"
+                "phpstan/phpstan": "^2.1.29"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^13",
@@ -10331,7 +10331,8 @@
                 "phpunit/phpunit": "^10.5.35 || ^11.5.15"
             },
             "suggest": {
-                "orchestra/testbench": "Using Larastan for analysing a package needs Testbench"
+                "orchestra/testbench": "Using Larastan for analysing a package needs Testbench",
+                "phpmyadmin/sql-parser": "Install to enable Larastan's optional phpMyAdmin-based SQL parser automatically"
             },
             "type": "phpstan-extension",
             "extra": {
@@ -10372,7 +10373,7 @@
             ],
             "support": {
                 "issues": "https://github.com/larastan/larastan/issues",
-                "source": "https://github.com/larastan/larastan/tree/v3.7.2"
+                "source": "https://github.com/larastan/larastan/tree/v3.8.0"
             },
             "funding": [
                 {
@@ -10380,7 +10381,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-09-19T09:03:05+00:00"
+            "time": "2025-10-27T23:09:14+00:00"
         },
         {
             "name": "laravel/pint",

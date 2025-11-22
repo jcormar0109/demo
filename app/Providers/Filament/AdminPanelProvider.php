@@ -53,24 +53,8 @@ class AdminPanelProvider extends PanelProvider
             ->login(Login::class)
             ->plugins([
                 CustomDashboardsPlugin::make()
-                    ->widgetDataSources([
-                        BrandWidgetDataSource::class,
-                        CategoryWidgetDataSource::class,
-                        CustomerWidgetDataSource::class,
-                        OrderWidgetDataSource::class,
-                        PaymentWidgetDataSource::class,
-                        ProductWidgetDataSource::class,
-                    ])
-                    ->widgets([
-                        StatsOverviewWidget::class,
-                        CustomersChart::class,
-                        RevenueShareByChannelChart::class,
-                        LatestOrders::class,
-                        SalesByCategoryChart::class,
-                        OrdersChart::class,
-                        PriceQuantityChart::class,
-                        OrderDistributionByStatusChart::class,
-                    ]),
+                    ->discoverDataSources(in: app_path('Filament/Widgets/DataSources'), for: 'App\\Filament\\Widgets\\DataSources')
+                    ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets'),
             ])
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->discoverClusters(in: app_path('Filament/Clusters'), for: 'App\\Filament\\Clusters')

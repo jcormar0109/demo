@@ -2,7 +2,7 @@
 
 namespace App\Filament\Clusters\Products\Resources\Categories\Schemas;
 
-use App\Models\Shop\Category;
+use App\Models\Shop\ProductCategory;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -36,7 +36,7 @@ class CategoryForm
                                     ->dehydrated()
                                     ->required()
                                     ->maxLength(255)
-                                    ->unique(Category::class, 'slug', ignoreRecord: true),
+                                    ->unique(ProductCategory::class, 'slug', ignoreRecord: true),
                             ]),
 
                         Select::make('parent_id')
@@ -50,18 +50,18 @@ class CategoryForm
 
                         RichEditor::make('description'),
                     ])
-                    ->columnSpan(['lg' => fn (?Category $record) => $record === null ? 3 : 2]),
+                    ->columnSpan(['lg' => fn (?ProductCategory $record) => $record === null ? 3 : 2]),
                 Section::make()
                     ->schema([
                         TextEntry::make('created_at')
-                            ->state(fn (Category $record): ?string => $record->created_at?->diffForHumans()),
+                            ->state(fn (ProductCategory $record): ?string => $record->created_at?->diffForHumans()),
 
                         TextEntry::make('updated_at')
                             ->label('Last modified at')
-                            ->state(fn (Category $record): ?string => $record->updated_at?->diffForHumans()),
+                            ->state(fn (ProductCategory $record): ?string => $record->updated_at?->diffForHumans()),
                     ])
                     ->columnSpan(['lg' => 1])
-                    ->hidden(fn (?Category $record) => $record === null),
+                    ->hidden(fn (?ProductCategory $record) => $record === null),
             ])
             ->columns(3);
     }
