@@ -32,6 +32,8 @@ class ProductResource extends Resource
 
     protected static ?int $navigationSort = 0;
 
+    protected static ?string $slug = 'products';
+
     public static function form(Schema $schema): Schema
     {
         return ProductForm::configure($schema);

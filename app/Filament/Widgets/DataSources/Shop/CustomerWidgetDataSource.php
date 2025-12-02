@@ -30,7 +30,6 @@ class CustomerWidgetDataSource extends EloquentWidgetDataSource
             TextAttribute::make('phone')
                 ->nullable(),
             DateAttribute::make('birthday')
-                ->time(false)
                 ->nullable(),
             DateAttribute::make('created_at')
                 ->nullable(),

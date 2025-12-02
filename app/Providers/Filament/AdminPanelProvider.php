@@ -5,6 +5,7 @@ namespace App\Providers\Filament;
 use App\Filament\Pages\Auth\Login;
 use App\Filament\Pages\Dashboard;
 use App\Http\Middleware\Authenticate;
+use App\Models\Team;
 use Filament\CustomDashboardsPlugin\CustomDashboardsPlugin;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -32,7 +33,10 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 CustomDashboardsPlugin::make()
                     ->discoverDataSources(in: app_path('Filament/Widgets/DataSources'), for: 'App\\Filament\\Widgets\\DataSources')
-                    ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets'),
+                    ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
+                    ->shareableModels([
+                        Team::class,
+                    ]),
             ])
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->discoverClusters(in: app_path('Filament/Clusters'), for: 'App\\Filament\\Clusters')

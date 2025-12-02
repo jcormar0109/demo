@@ -56,7 +56,6 @@ class ProductWidgetDataSource extends EloquentWidgetDataSource
             BooleanAttribute::make('backorder'),
             BooleanAttribute::make('requires_shipping'),
             DateAttribute::make('published_at')
-                ->time(false)
                 ->nullable(),
             TextAttribute::make('seo_title')
                 ->nullable(),

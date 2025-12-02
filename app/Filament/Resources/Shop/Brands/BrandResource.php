@@ -30,6 +30,8 @@ class BrandResource extends Resource
 
     protected static ?int $navigationSort = 2;
 
+    protected static ?string $slug = 'brands';
+
     public static function form(Schema $schema): Schema
     {
         return BrandForm::configure($schema);

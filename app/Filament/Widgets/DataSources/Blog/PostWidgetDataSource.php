@@ -34,7 +34,6 @@ class PostWidgetDataSource extends EloquentWidgetDataSource
             TextAttribute::make('slug'),
             TextAttribute::make('content'),
             DateAttribute::make('published_at')
-                ->time(false)
                 ->nullable(),
             TextAttribute::make('seo_title')
                 ->nullable(),
