@@ -16,3 +16,7 @@ Se solicita crear un nuevo ítem en el menú lateral llamado **Services**, con e
   - Nombre del servicio.
   - Nombre del producto relacionado.
 - Se deben poder **crear** y **editar** los servicios.
+
+## Pasos realizados
+
+Al acabar el ejercicio, se subirá dentro del repositorio un documento con apuntes y pasos realizados para completar el ejercicio, junto a enlaces informando de donde se ha sacado la información.
