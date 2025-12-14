@@ -2,54 +2,28 @@
 
 namespace App\Models\Shop;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Service extends Model
 {
-    private int $id;
-    private string $name;
-    private int $product_id;
+    use HasFactory;
+    use InteractsWithMedia;
 
     /**
-     * @param int $id
-     * @param string $name
-     * @param int $product_id
+     * @var string
      */
-    public function __construct(int $id, string $name, int $product_id)
-    {
-        $this->id = $id;
-        $this->name = $name;
-        $this->product_id = $product_id;
-    }
+    protected $table = 'shop_services';
+    protected $fillable = [
+        'name',
+        'product_id',
+    ];
 
-    public function getId(): int
+    public function product()
     {
-        return $this->id;
-    }
-
-    public function setId(int $id): void
-    {
-        $this->id = $id;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-
-    public function getProductId(): int
-    {
-        return $this->product_id;
-    }
-
-    public function setProductId(int $product_id): void
-    {
-        $this->product_id = $product_id;
+        return $this->belongsTo(Product::class, 'product_id');
     }
 
 }
