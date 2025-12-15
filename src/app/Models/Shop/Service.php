@@ -18,12 +18,12 @@ class Service extends Model
     protected $table = 'shop_services';
     protected $fillable = [
         'name',
-        'product_id',
+        'product_name',
     ];
 
-    public function product()
+    public function shop_product()
     {
-        return $this->belongsTo(Product::class, 'product_id');
+        return $this->belongsTo(Product::class, 'name');
     }
 
 }

@@ -20,10 +20,10 @@ class ServicesTable {
     public static function configure($table): Table{
         return $table
             ->columns([
-                TextColumn::make('Name')
+                TextColumn::make('name')->label('Name')
                 ->searchable()
                 ->sortable(),
-                TextColumn::make('Shop product id')
+                TextColumn::make('product_name')->label('Product')
                 ->searchable()
                 ->sortable(),
             ])

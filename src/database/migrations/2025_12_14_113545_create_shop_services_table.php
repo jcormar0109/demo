@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('shop_services', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->foreignId('product_id')->constrained();
+            $table->string('product_name');
             $table->timestamps();
         });
     }
