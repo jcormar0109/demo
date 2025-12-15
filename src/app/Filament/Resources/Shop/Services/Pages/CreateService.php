@@ -45,7 +45,7 @@ class CreateService extends CreateRecord
         Notification::make()
             ->title('New Service created')
             ->icon('heroicon-o-wrench-screwdriver')
-            ->body("**A new service has been created.**")
+            ->body("A new service has been created.")
             ->actions([
                 Action::make('View')
                     ->url(ServiceResource::getUrl('edit', ['record' => $service])),

@@ -23,9 +23,13 @@ class ServicesTable {
                 TextColumn::make('name')->label('Name')
                 ->searchable()
                 ->sortable(),
-                TextColumn::make('product_name')->label('Product')
+                TextColumn::make('product_id')->label('Product ID')
                 ->searchable()
                 ->sortable(),
+                TextColumn::make('shop_products.name')
+                ->label('Product')
+                    ->searchable()
+                    ->sortable(),
             ])
 
             ->recordActions([

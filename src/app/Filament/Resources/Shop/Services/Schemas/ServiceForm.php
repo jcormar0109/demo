@@ -37,8 +37,8 @@ class ServiceForm
                 ->maxLength(255)
                 ->unique(Service::class, 'name', ignoreRecord: true),
 
-            Select::make('product_name')
-            ->relationship('shop_product', 'name')
+            Select::make('product_id')
+            ->relationship('shop_products', 'name')
             ->searchable()
                 ->required()
                 ->label('Associated Product'),

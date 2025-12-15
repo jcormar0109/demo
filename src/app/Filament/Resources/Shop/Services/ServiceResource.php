@@ -5,8 +5,10 @@ namespace App\Filament\Resources\Shop\Services;
 use App\Filament\Resources\Shop\Services\Pages\ListServices;
 use App\Filament\Resources\Shop\Services\Pages\CreateService;
 use App\Filament\Resources\Shop\Services\Pages\EditService;
+use App\Filament\Resources\Shop\Services\Schemas\ServiceForm;
 use App\Filament\Resources\Shop\Services\Tables\ServicesTable;
 use App\Filament\Resources\Shop\Services\Pages;
+use Filament\Schemas\Schema;
 use App\Models\Shop\Service;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
@@ -26,6 +28,11 @@ class ServiceResource extends Resource {
     public static function table(Table $table): Table
     {
         return ServicesTable::configure($table);
+    }
+
+    public static function form(Schema $schema): Schema
+    {
+        return ServiceForm::configure($schema);
     }
 
     public static function getPages(): array
